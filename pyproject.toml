@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "certbot-dns-mchost"
 dynamic = ["version"]
-description = "Certbot continuous integration framework"
+description = "Certbot plugin for DNS-01 challenge for McHost."
 license = "Apache-2.0"
 requires-python = ">=3.10"
 
