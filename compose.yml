@@ -1,0 +1,5 @@
+services:
+    certbot_dns_mchost:
+        image: ljdswer/certbot_dns_mchost
+        build:
+            target: final
