@@ -1,0 +1,2 @@
+beautifulsoup4>=4.14.3
+certbot>=5.2.2

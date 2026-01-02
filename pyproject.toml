@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-dns-mchost"
+dynamic = ["version"]
+description = "Certbot continuous integration framework"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "beautifulsoup4",
+    "certbot",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "certbot_dns_mchost.__version__"}
+
+[project.entry-points."certbot.plugins"]
+dns-mchost = "certbot_dns_mchost.main:Authenticator"
