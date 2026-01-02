@@ -2,10 +2,11 @@
 The certbot Authenticator implementation for McHost.
 """
 
-from typing import Any, Callable, override
+from typing import Any, Callable
 
 from certbot import errors
 from certbot.plugins import dns_common
+from typing_extensions import override
 
 from .client import McHostClient
 
