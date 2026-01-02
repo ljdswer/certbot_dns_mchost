@@ -35,10 +35,7 @@ class McHostClient:
 
     def add_txt_record(self, domain_name: str, record_name: str, record_content: str):
         (domain_base, domain_id) = self.get_id_for_domain(domain_name)
-        if domain_base != domain_name:
-            raise PluginError("Plugin does not support subdomains yet (except for *.).")
-
-        record_name = record_name[: -(len(domain_name) + 1)]
+        record_name = record_name[: -(len(domain_base) + 1)]
         response = self._session.post(
             MCHOST_CREATE_RECORD_URL,
             data={
